@@ -1,0 +1,53 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color:black;
+}
+.main-box{
+    width:40%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin:70px auto;
+}
+.card{
+    height:150px;
+    width:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 1px 1px 2px white;
+    animation:easeInAnimation 1s ease-in forwards;
+}
+img{
+    height:100px;
+    margin:5px 25px;
+}
+h1{
+    font-size: 50px;
+    margin-top:50px;
+    color:#D3D9D4;
+    text-align: center;
+}
+h3{
+    color:#D3D9D4;
+}
+
+
+
+@keyframes easeInAnimation {
+    from{
+        transform: translateX(-500px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

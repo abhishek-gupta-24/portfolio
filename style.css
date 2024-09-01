@@ -3,30 +3,37 @@
     padding:0px;
 }
 body{
-    background-color:#212A31 ;
+    background-color:black;
 }
 #header{
     height:70px;
     width:100%;
-    border-bottom:1px solid black;
+    border-bottom:1px solid white;
     display: flex;
-    flex-direction: row;
-    box-shadow: 1px 1px 4px black;
+    justify-content: center;
+    box-shadow: 1px 1px 2px white;
+    position: fixed;
 }
 .btn{
     height:40px;
-    width:120px;
+    width:80px;
     font-size: 15px;
-    margin:1em 1em;
+    margin:1em 2em;
     padding: 0.25em;
-    border:0.5px solid #D3D9D4;
-    border-radius:20px;
-    background-color: #124E66;
-    color:#D3D9D4;
+     background-color:black;
+    color:white;
     font-weight: 700;
+    border:none;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+}
+.download-btn{
+    width:115px;
 }
 .btn:hover{
-    background-color: #124E66a1;
+    border-bottom:2px solid white;
 }
 #main img{
     width:300px;
@@ -46,7 +53,7 @@ body{
     position: absolute;
     left:50%;
     top:40%;
-    animation: colorchange 2s ease-in-out 0.5s infinite alternate;
+    animation: colorchange 2s ease-in-out 0s infinite alternate;
 }
 #bub_two{
     background-color: white;
@@ -69,43 +76,67 @@ body{
 
 }
 #container{
-    display:inline-block
+    display:inline-block;
+}
+#my_name{
+    color:#FF7F50;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
 }
 #name{
-    font-size:80px;
+    margin:0px;
+    padding:0px;
+    font-size:60px;
     font-family: "Playwrite GB S", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color:#D3D9D4;
+    color:white;
     position:absolute;
-    top:40%;
-    left:8%;
+    top:55%;
+    left:10%;
     white-space: nowrap;
     width:90%;
     overflow:hidden;
-    animation:typing 1.75s steps(14) infinite;
-
 }
+#name span::before{
+    content: "";
+    animation:word 5s infinite;
+}
+
+@keyframes word {
+    0%,33%{
+        content: "Developer...";
+    }
+    34%,66%{
+        content:"Problem Solver...";
+    }
+    67%,100%{
+        content:"Tech Enthusiast...";
+    }
+}
+@keyframes typing{
+    from{
+       width:0;
+    }
+}
+       
+
 #intro{
-    position:absolute;
-    top:35%;
-    font-size:40px;
+    position: absolute;
+    top:43%;
+    font-size:60px;
     color:white;
     left:10%;
 }
-#content{
-    height:200px;
-    width:600px;
-    position: absolute;
-    left:8%;
-    top:55%;
-    margin-top:20px;
-}
-#content p{
-    line-height: 30px;
-    font-size: 20px;
-    color:#D3D9D4
+#greet{
+    position:absolute;
+    top:38%;
+    font-size:40px;
+    color:#FFBD39;
+    left:10%;
 }
 #contact{
     display: flex;
@@ -115,6 +146,7 @@ body{
     position:absolute;
     right:0px;
     top:15%;
+    position:fixed;
 }
 #contact .item a img{
     height:30px;
@@ -132,11 +164,7 @@ body{
 .item{
     margin-top:20px;
 }
-@keyframes typing{
- from{
-    width:0;
- }
-}
+
 #footer{
     display: flex;
     flex-direction: column;
@@ -155,46 +183,34 @@ body{
 }
 @media (min-width:1000px) and (max-width:1250px){
     #name{
-        font-size:60px;
+        font-size:50px;
         font-family: "Playwrite GB S", cursive;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        color:#D3D9D4;
+        color:white;
         position:absolute;
-        top:40%;
+        top:60%;
         left:2%;
         white-space: nowrap;
         width:90%;
         overflow:hidden;
-        animation:typing 1.75s steps(14) infinite;
     
     }
-    @keyframes typing{
-        from{
-           width:0;
-        }
-    }
     #intro{
-        position:absolute;
-        top:35%;
-        font-size:30px;
-        color:white;
-        left:4%;
-    }  
-    #content{
-        height:200px;
-        width:600px;
         position: absolute;
+        top:48%;
+        font-size:50px;
+        color:white;
         left:2%;
-        top:50%;
-        margin-top:20px;
     }
-    #content p{
-        line-height: 30px;
-        font-size: 20px;
-        color:#D3D9D4
-    }
+    #greet{
+        position:absolute;
+        top:43%;
+        font-size:30px;
+        color:#FFBD39;
+        left:2%;
+    } 
 }
 @media (max-width:999px){
     #header{
@@ -211,14 +227,16 @@ body{
         font-size: 10px;
         margin:1.5em 1em;
         padding: 0.25em;
-        border:0.5px solid #D3D9D4;
-        border-radius:20px;
-        background-color: #124E66;
-        color:#D3D9D4;
+        border:none;
+        background-color: black;
+        color:white;
         font-weight: 700;
     } 
+    .btn:hover{
+        border-bottom:2px solid white;
+    }
     #main img{
-        width:40%;
+        width:30%;
         position: absolute;
         left:35%;
         top:15%;
@@ -265,35 +283,28 @@ body{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color:#D3D9D4;
+    color:white;
     position:absolute;
-    top:47%;
-    left:8%;
+    top:65%;
+    left:10%;
     white-space: nowrap;
     width:90%;
     overflow:hidden;
-    animation:typing 1.75s steps(14) infinite;
 
 }
-#intro{
+#greet{
     position:absolute;
-    top:44%;
+    top:50%;
     font-size:20px;
-    color:white;
+    color:#FFBD39;
     left:10%;
 }
-#content{
-    height:200px;
-    width:70%;
+#intro{
     position: absolute;
-    left:8%;
     top:55%;
-    margin-top:10px;
-}
-#content p{
-    line-height: 15px;
-    font-size: 15px;
-    color:#D3D9D4
+    font-size:35px;
+    color:white;
+    left:10%;
 }
 #contact{
     display: flex;
@@ -319,11 +330,6 @@ body{
 }
 .item{
     margin-left:20px;
-}
-@keyframes typing{
- from{
-    width:0;
- }
 }
 #footer{
     display: flex;

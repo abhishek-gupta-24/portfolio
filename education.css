@@ -1,0 +1,55 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color:black;
+}
+h1{
+    font-size: 50px;
+    margin-top:50px;
+    color:#D3D9D4;
+    text-align: center;
+    animation: easeInAnimationRightward 1s ease-in forwards;
+}
+.info{
+    color:white;
+    line-height: 25px;
+    width:100%;
+    text-align: center;
+}
+.main-box{
+    margin:50px auto;
+    height:400px;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: easeInAnimationUpward 1s ease-in forwards;
+}
+.info h4,h3,h5{
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+@keyframes easeInAnimationUpward {
+    from{
+        transform: translateY(500px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes easeInAnimationRightward {
+    from{
+        transform: translateX(-1000px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
