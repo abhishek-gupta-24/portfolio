@@ -8,6 +8,16 @@ for(let i=0;i<btns.length;i++){
     });
 }
 
+let submit=document.querySelector("#submit");
+let textarea = document.querySelector("#submit textarea");
+let input= document.querySelector("#submit input");
+
+submit.addEventListener("click",function (){
+    alert("your request has been submitted!! I will contact you soon.");
+    textarea.value="";
+    input.value="";
+});
+
 
 
     
