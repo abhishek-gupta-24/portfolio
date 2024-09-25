@@ -1,351 +1,166 @@
-*{
-    margin:0px;
-    padding:0px;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color:black;
+
+body {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
 }
-#header{
-    height:70px;
-    width:100%;
-    border-bottom:1px solid white;
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(37, 35, 35);
+  border-bottom: 1px solid white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(37, 35, 35);
+  border-bottom: 1px solid white;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  font-size: 1.05rem;
+  color: rgb(215, 187, 88);
+  border-bottom: 1px solid rgb(215, 187, 88);
+}
+.left {
+  font-size: 1.3rem;
+}
+#firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 20px;
+}
+
+#firstSection > div {
+  width: 35%;
+}
+.leftSection {
+  font-size: 2.5rem;
+}
+
+.rightSection img {
+  width: 80%;
+  border-radius: 50%;
+}
+.purple {
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(171, 118, 220);
+}
+#element {
+  font-weight: bold;
+  font-family: cursive;
+  color: rgb(215, 187, 88);
+}
+.btn {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: rgb(171, 118, 220);
+  border: none;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .leftSection {
+    font-size: 2rem;
+  }
+  .purple {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(171, 118, 220);
+  }
+}
+
+@media (min-width: 500px) and (max-width: 799px) {
+  #firstSection {
     display: flex;
-    justify-content: center;
-    box-shadow: 1px 1px 2px white;
-    position: fixed;
-}
-.btn{
-    height:40px;
-    width:80px;
-    font-size: 15px;
-    margin:1em 2em;
-    padding: 0.25em;
-     background-color:black;
-    color:white;
-    font-weight: 700;
-    border:none;
-    font-family: "Playwrite GB S", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal; 
-}
-.download-btn{
-    width:115px;
-}
-.btn:hover{
-    border-bottom:2px solid white;
-}
-#main img{
-    width:300px;
-    position: absolute;
-    left:60%;
-    top:25%;
-    border-radius:50%;
-    border:1px solid #D3D9D4;
-    z-index: 1;
-}
-#bub_one{
-    background-color: white;
-    height:350px;
-    width:350px;
-    border-radius: 50%;
-    opacity: 0.2;
-    position: absolute;
-    left:50%;
-    top:40%;
-    animation: colorchange 2s ease-in-out 0s infinite alternate;
-}
-#bub_two{
-    background-color: white;
-    height:150px;
-    width:150px;
-    border-radius: 50%;
-    opacity: 0.3;
-    position: absolute;
-    left:10%;
-    top:20%;
-    animation: colorchange 2s ease-in-out 3s infinite alternate;
-}
-@keyframes colorchange{
-    from{
-        background-color: white;
-    }to{
-        background-color:#FFCB9A;
-        opacity: 0.7;
-    }
-
-}
-#container{
-    display:inline-block;
-}
-#my_name{
-    color:#FF7F50;
-    font-family: "Playwrite GB S", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal; 
-}
-#name{
-    margin:0px;
-    padding:0px;
-    font-size:60px;
-    font-family: "Playwrite GB S", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color:white;
-    position:absolute;
-    top:55%;
-    left:10%;
-    white-space: nowrap;
-    width:90%;
-    overflow:hidden;
-}
-#name span::before{
-    content: "";
-    animation:word 5s infinite;
+    flex-direction: column-reverse;
+    justify-content: none;
+    align-items: center;
+    margin: 50px 20px;
+  }
+  .leftSection {
+    font-size: 2rem;
+  }
+  .purple {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(171, 118, 220);
+    margin: 100px auto;
+  }
+  #firstSection > div {
+    width: 50%;
+  }
+  .left {
+    display: none;
+  }
 }
 
-@keyframes word {
-    0%,33%{
-        content: "Developer...";
-    }
-    34%,66%{
-        content:"Problem Solver...";
-    }
-    67%,100%{
-        content:"Tech Enthusiast...";
-    }
-}
-@keyframes typing{
-    from{
-       width:0;
-    }
-}
-       
-
-#intro{
-    position: absolute;
-    top:43%;
-    font-size:60px;
-    color:white;
-    left:10%;
-}
-#greet{
-    position:absolute;
-    top:38%;
-    font-size:40px;
-    color:#FFBD39;
-    left:10%;
-}
-#contact{
+@media (max-width: 499px) {
+  #firstSection {
     display: flex;
-    flex-direction: column;
-    height:100%;
-    width:70px;
-    position:absolute;
-    right:0px;
-    top:15%;
-    position:fixed;
-}
-#contact .item a img{
-    height:30px;
-    width:30px;
-    transition: 0.5s ease-out 0.5s;
-    opacity: 1;
-    border-radius:50%;
-    border:0.25px solid #124E66;
-}
-#contact .item a img:hover{
+    flex-direction: column-reverse;
+    justify-content: none;
+    align-items: center;
+    margin:50px 20px;
+  }
+  .leftSection {
+    font-size: 1.5rem;
+  }
+  .purple {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(171, 118, 220);
+    margin: 50px auto;
+  }
+  #firstSection > div {
+    width: 60%;
+  }
+  .left {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 40px;
-    width:40px;
-    box-shadow:1px 1px 2px #D3D9D4;
+    background-color: rgb(37, 35, 35);
+    border-bottom: 1px solid white;
+  }
+  nav ul li {
+    font-size: 0.8rem;
+    margin: 0 10px;
+  }
 }
-.item{
-    margin-top:20px;
-}
-
-#footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #2e3944;
-    position: absolute;
-    width:100%;
-    bottom:0px;
-    height:8%;
-}
-#footer p{
-    font-size:15px;
-    color:#D3D9D4;
-    margin-top:0.5em;
-}
-@media (min-width:1000px) and (max-width:1250px){
-    #name{
-        font-size:50px;
-        font-family: "Playwrite GB S", cursive;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        color:white;
-        position:absolute;
-        top:60%;
-        left:2%;
-        white-space: nowrap;
-        width:90%;
-        overflow:hidden;
-    
-    }
-    #intro{
-        position: absolute;
-        top:48%;
-        font-size:50px;
-        color:white;
-        left:2%;
-    }
-    #greet{
-        position:absolute;
-        top:43%;
-        font-size:30px;
-        color:#FFBD39;
-        left:2%;
-    } 
-}
-@media (max-width:999px){
-    #header{
-        height:50px;
-        width:100%;
-        border-bottom:1px solid black;
-        display: flex;
-        flex-direction: row;
-        box-shadow: 1px 1px 4px black;
-    } 
-    .btn{
-        height:20px;
-        width:80px;
-        font-size: 10px;
-        margin:1.5em 1em;
-        padding: 0.25em;
-        border:none;
-        background-color: black;
-        color:white;
-        font-weight: 700;
-    } 
-    .btn:hover{
-        border-bottom:2px solid white;
-    }
-    #main img{
-        width:30%;
-        position: absolute;
-        left:35%;
-        top:15%;
-        border-radius:50%;
-        border:1px solid #D3D9D4;
-        z-index: 1;
-    }
-    #bub_one{
-        background-color: white;
-        height:150px;
-        width:150px;
-        border-radius: 50%;
-        opacity: 0.2;
-        position: absolute;
-        left:50%;
-        top:40%;
-        animation: colorchange 2s ease-in-out 0.5s infinite alternate;
-    }
-@keyframes colorchange{
-    from{
-        background-color: white;
-    }to{
-        background-color:#FFCB9A;
-        opacity: 0.7;
-    }
-
-}
-#bub_two{
-    background-color: white;
-    height:75px;
-    width:75px;
-    border-radius: 50%;
-    opacity: 0.3;
-    position: absolute;
-    left:10%;
-    top:20%;
-}
-#container{
-    display:inline-block;
-}
-#name{
-    font-size:30px;
-    font-family: "Playwrite GB S", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color:white;
-    position:absolute;
-    top:65%;
-    left:10%;
-    white-space: nowrap;
-    width:90%;
-    overflow:hidden;
-
-}
-#greet{
-    position:absolute;
-    top:50%;
-    font-size:20px;
-    color:#FFBD39;
-    left:10%;
-}
-#intro{
-    position: absolute;
-    top:55%;
-    font-size:35px;
-    color:white;
-    left:10%;
-}
-#contact{
-    display: flex;
-    flex-direction: row;
-    height:70px;
-    width:100%;
-    position:absolute;
-    justify-content: center;
-    align-items: center;
-    top:80%;
-}
-#contact .item a img{
-    height:10%;
-    transition: 0.5s ease-out 0.5s;
-    opacity: 1;
-    border-radius:50%;
-    border:0.25px solid #124E66;
-}
-#contact .item a img:hover{
-    height: 30px;
-    width:30px;
-    box-shadow:1px 1px 2px #D3D9D4;
-}
-.item{
-    margin-left:20px;
-}
-#footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #2e3944;
-    position: absolute;
-    width:100%;
-    bottom:0px;
-    height:8%;
-}
-#footer p{
-    font-size:10px;
-    color:#D3D9D4;
-    margin-top:0.5em;
-}
-}
-

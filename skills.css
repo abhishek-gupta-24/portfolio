@@ -1,53 +1,63 @@
-*{
-    margin:0px;
-    padding:0px;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color:black;
-}
-.main-box{
-    width:40%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin:70px auto;
-}
-.card{
-    height:150px;
-    width:150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:20px;
-    border-radius: 10px;
-    margin-right: 20px;
-    box-shadow: 1px 1px 2px white;
-    animation:easeInAnimation 1s ease-in forwards;
-}
-img{
-    height:100px;
-    margin:5px 25px;
+body {
+  height: 100vh;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, black,rgb(74, 73, 73));
 }
 h1{
-    font-size: 50px;
-    margin-top:50px;
-    color:#D3D9D4;
     text-align: center;
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(171, 118, 220);;
 }
-h3{
-    color:#D3D9D4;
+
+main .skills-container {
+    width:40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+main .skills-container .card {
+    width: 150px;
+    height: 150px;
+    background-color:black;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px 0 white;
+    animation: popOut 1.5s ease-out 0.2s forwards;
+}
 
+main .skills-container .card img {
+    width: 100%;
+    height: 100%;
 
-@keyframes easeInAnimation {
-    from{
-        transform: translateX(-500px);
+}
+
+@media (max-width: 400px) {
+    main .skills-container .card {
+        width: 100px;
+        height: 100px;
+        background-color:black;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
+
+@keyframes popOut {
+    0% {
+      transform: scale(0.7) translateY(30px); /* Initial state */
+      opacity: 0; /* Initial state */
+    }
+    100% {
+      transform: scale(1) translateY(0); /* Final state */
+      opacity: 1; /* Final state */
+    }
+  }
+
+

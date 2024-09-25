@@ -1,78 +1,130 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-body{
-    background-color: black;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    font-size: 50px;
-    margin-top:70px;
-    color:#D3D9D4;
-    text-align: center;
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
 }
-#contact{
-    display: flex;
-    width:20%;
-    justify-content: space-between;
-    position: absolute;
-    bottom:15%;
-    left:41%;
+section {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#contact .item img{
-    height:50px;
-    width:50px;
-    border-radius: 50%;
+.right img {
+  width: 100%;
+  border-radius: 30px;
 }
-#user_info{
-    display: flex;
-    flex-direction: column;
-    width:40%;
-    row-gap: 10px;
-    align-items: center;
-    justify-content: space-between;
+
+.left form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.left h2 {
+  color: rgb(171, 118, 220);
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.left hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: rgb(171, 118, 220);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.left form .input-box {
+  width: 400px;
+  height: 50px;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+.left form .message {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.input-box:focus {
+  border: 4px solid rgb(171, 118, 220);
+  border: none;
+}
+
+.input-box::placeholder {
+  color: rgb(171, 118, 220);
+}
+.left form button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  background-color: rgb(171, 118, 220);
+}
+
+
+footer .social_media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+footer .social_media img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 800px) {
+
+  .right {
+    display: none;
+  }
+  .left h2 {
+    font-size: 30px;
+  }
+  .left form .input-box {
+    width: 80%;
+    height: 50px;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+  }
+  .left form .message {
+    height: 100px;
+    padding-top: 15px;
     border-radius: 20px;
-    box-shadow: 2px 2px 4px #D3D9D4;;
-    padding: 10px;
-    position: absolute;
-    top:30%;
-    left:30%;
-}
-#user_info input{
-    width:30%;
-    height:20px;
-    border-radius: 10px;
-    padding:2px;
-    background-color:#D3D9D4;;
-    
-}
-textarea{
-    border-radius: 10px;
-    padding: 2px;
-    background-color:#D3D9D4;;
-}
-#submit{
-    height:30px;
-    width:60px;
-    border:2px solid white;
-    border-radius: 10px;
-    background-color:#D3D9D4;;
-    margin: auto;
-}
-h4{
-    color:white;
-    position: absolute;
-    bottom:28%;
-    left:37%;
-    font-size: 20px;
-}
-input::placeholder {
-    font-weight: 600;
-    color: black;
+  }
+  footer .social_media img{
+    width:30px;
+    height: 30px;
+  }
+  footer .social_media {
+    width: 50%;
+  }
+  section {
+    margin-top: 40px;
+  }
 }
 
-textarea::placeholder {
-    font-weight: 600;
-    color: black;
+@media (max-width: 1350px) {
+  .right img {
+    width: 80%;
+  }
+  .right img {
+    margin-left: 100px;
+  }
 }

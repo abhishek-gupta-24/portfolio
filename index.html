@@ -1,48 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="icon" href="professional-portfolio.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-</head>
-<body>
-        <div id="header">
-            <button class="btn">Home</button>
-            <button class="btn">Education</button>
-            <button class="btn">Skills</button>
-            <button class="btn">Projects</button>
-            <button class="btn">Contact</button>
-            <a href="https://drive.google.com/file/d/1yIAa7_nS6eU1WPkZ0CKJydGsD6g1udGY/view?usp=sharing"><button class="btn download-btn">Downlaod CV</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhishek Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Abhishek's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-
-
-        <div id="container">
-            <div id="greet">HELLO!</div>
-            <div id="intro">I'm <span id="my_name">Abhishek Gupta</span></div>
-            <div id="name"><span></span></div>
+      </nav>
+    </header>
+    <main>
+      <section id="firstSection">
+        <div class="leftSection">
+          Hi, My name is <br />
+          <span class="purple">Abhishek Gupta</span>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+          <br />
+          <button class="btn">
+            <a
+              href="https://drive.google.com/file/d/1dq9Lp18eT7RT4y191hwipewEM6rtt_az/view?usp=drive_link"
+              >Download Resume</a
+            >
+          </button>
         </div>
-        <div id="main">
-            <img src="image.png">
+        <div class="rightSection">
+          <img src="images/my_image.png" alt="" />
         </div>
-        <div id="bub_one"></div>
-        <div id="bub_two"></div>
-        <div id="contact">
-            <div class="item"><a href="https://www.instagram.com/abhiii_gupta_24/"><img src="instagram2.png"></a></div>
-            <div class="item"><a href="https://www.linkedin.com/in/abhishek-gupta-5b2307242/"><img src="linkedin.png"></a></div>
-            <div class="item"><a href="https://github.com/abhishek-gupta-24"><img src="github.svg"></a></div>
-            <div class="item"><a href="https://leetcode.com/u/abhishek399/"><img src="leetcode.png"></a></div>
-        </div>
-
-        <div id="footer">
-            <p>Portfolio site</p>
-            <p>-all rights reserved | 2024-</p>
-        </div>
-        <script src="app.js"></script>
-
-</body>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer.....",
+          "Programmer.....",
+          "Tech Enthusiast.....",
+        ],
+        typeSpeed: 70,
+        loop: true,
+      });
+    </script>
+    <script src="app.js"></script>
+  </body>
 </html>
